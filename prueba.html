@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galería de Videos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f5;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* default: 1 columna en móviles */
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    @media (min-width: 600px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .video-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .video-card {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .video-title {
+      padding: 15px;
+      font-size: 1rem;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .video-title {
+        font-size: 0.95rem;
+        padding: 12px;
+      }
+
+      .thumbnail {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Galería de Videos</h1>
+
+  <div class="video-grid">
+
+    <a href="video1.html" class="video-card">
+      <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" class="thumbnail" alt="Video 1">
+      <div class="video-title">Título del Video 1</div>
+    </a>
+
+    <a href="video2.html" class="video-card">
+      <img src="https://img.youtube.com/vi/3tmd-ClpJxA/hqdefault.jpg" class="thumbnail" alt="Video 2">
+      <div class="video-title">Título del Video 2</div>
+    </a>
+
+    <a href="video3.html" class="video-card">
+      <img src="https://via.placeholder.com/480x270.png?text=Video+3" class="thumbnail" alt="Video 3">
+      <div class="video-title">Título del Video 3</div>
+    </a>
+
+    <a href="video4.html" class="video-card">
+      <img src="https://img.youtube.com/vi/2vjPBrBU-TM/hqdefault.jpg" class="thumbnail" alt="Video 4">
+      <div class="video-title">Título del Video 4</div>
+    </a>
+
+  </div>
+
+</body>
+</html>
