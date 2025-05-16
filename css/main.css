@@ -28,6 +28,11 @@
         gap: 0px;
     }
 
+    .logo>img:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+
     .logo img {
         height: 130px;
         width: 130px;
